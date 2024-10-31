@@ -1,56 +1,56 @@
 ---
-title: Explorando Funciones de ES6
+title: Explorando Funções do ES6
 date: 2023-06-01
-description: Explorando algunas de las nuevas funciones de ES6 en JavaScript.
+description: Explorando algumas das novas funcionalidades do ES6 em JavaScript.
 author: Jane Doe
 # image: https://placehold.co/1400x900/
 image: "/assets/images/post-01.png"
-tags: [JavaScript, ES6, Programming]
+tags: [JavaScript, ES6, Programação]
 ---
 
 # {frontmatter.title}
 
-{/* <!-- Mostrar imagen --> */}
+{/* <!-- Mostrar imagem --> */}
 
 <img
   src="/assets/images/post-01.png"
   width="350"
-  alt="Explorando Funciones de ES6"
+  alt="Explorando Funções do ES6"
 />
 
-JavaScript ES6 introdujo varias funciones nuevas que han hecho que la codificación en JavaScript sea más eficiente y agradable. Vamos a explorar algunas de estas funciones.
+O JavaScript ES6 introduziu várias novas funcionalidades que tornaram a codificação em JavaScript mais eficiente e agradável. Vamos explorar algumas dessas funcionalidades.
 
-## Arrow Functions - Funciones de Flecha
+## Funções de Flecha
 
-Las funciones de flecha proporcionan una nueva sintaxis para escribir expresiones de función. Son más concisas y vinculan léxicamente el valor `this`.
+As funções de flecha fornecem uma nova sintaxe para escrever expressões de função. São mais concisas e vinculam lexicamente o valor de `this`.
 
-### Ejemplo
+### Exemplo
 
 ```javascript
 const add = (a, b) => a + b;
-console.log(add(2, 3)); // Output: 5
+console.log(add(2, 3)); // Saída: 5
 ```
 
-## Template Literals - Literales de Plantilla
+## Template Literals
 
-Los literales de plantilla permiten una interpolación de cadenas más fácil y cadenas de varias líneas. Utilizan comillas invertidas (\`) en lugar de comillas simples o dobles.
+Os template literals permitem uma interpolação de strings mais fácil e strings de várias linhas. Eles utilizam acento grave da crase (\`) em vez de aspas simples ou duplas.
 
-### Ejemplo
+### Exemplo
 
 ```javascript
 const name = "Jane";
-console.log(`Hello, ${name}!`);
-// Output: Hello, Jane!
+console.log(`Olá, ${name}!`);
+// Saída: Olá, Jane!
 ```
 
-## Destructuring Assignment - Asignación por Desestructuración
+## Atribuição via desestruturação
 
-La asignación por desestructuración le permite extraer valores de matrices u objetos y asignarlos a variables de una manera más concisa.
+A atribuição via desestruturação permite extrair valores de arrays ou objetos e atribuí-los a variáveis de uma maneira mais concisa.
 
-### Ejemplo
+### Exemplo
 
 ```javascript
 const person = { name: "Jane", age: 30 };
 const { name, age } = person;
-console.log(name, age); // Output: Jane 30
+console.log(name, age); // Saída: Jane 30
 ```

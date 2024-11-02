@@ -1,0 +1,108 @@
+---
+title: Começando com Flutter
+date: 2024-08-10
+description: Aprenda a desenvolver aplicativos móveis com Flutter e Dart.
+author: John Smith
+image: "/assets/images/post-02.png"
+tags: [Flutter, Desenvolvimento Móvel, Dart]
+---
+
+# Começando com Flutter
+
+Flutter é um kit de ferramentas de IU para construir aplicativos compilados nativamente para mobile, web e desktop a partir de uma única base de código.
+
+## Instalação do Flutter
+
+Para começar a desenvolver com Flutter, primeiro você precisa instalar o SDK do Flutter no seu sistema. Você pode seguir as instruções de instalação na [documentação oficial do Flutter](https://flutter.dev/docs/get-started/install).
+
+```bash
+flutter doctor
+```
+
+Este comando ajudará a verificar se você tem tudo o que é necessário para começar a desenvolver com Flutter.
+
+## Criação de um Novo Projeto
+
+Você pode criar um novo projeto Flutter usando o seguinte comando:
+
+```bash
+flutter create my_first_app
+cd my_first_app
+```
+
+Isso criará um novo projeto Flutter no diretório `my_first_app`.
+
+## Execução do Aplicativo
+
+Para executar seu aplicativo Flutter, você pode usar o seguinte comando:
+
+```bash
+flutter run
+```
+
+Isso compilará e executará seu aplicativo em um emulador ou dispositivo conectado. Agora você pode ver seu aplicativo em ação!
+
+## Escrevendo seu Primeiro Aplicativo
+
+Você pode editar o arquivo `lib/main.dart` para começar a escrever seu aplicativo Flutter. Aqui está um exemplo de um aplicativo contador simples.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Demo'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Você pressionou o botão esta quantidade de vezes:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Incrementar',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+```

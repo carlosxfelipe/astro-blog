@@ -1,0 +1,92 @@
+---
+title: Compreendendo os Hooks do React
+date: 2023-06-15
+description: Aprenda a usar os Hooks do React para gerenciar estado e ciclo de vida em componentes funcionais.
+author: Alice Johnson
+image: "/assets/images/post-03.png"
+tags: [React, JavaScript, Desenvolvimento Web]
+---
+
+# Compreendendo os Hooks do React
+
+Os Hooks do React são uma funcionalidade que permite usar o estado e outras características do React em componentes funcionais. Isso permite escrever componentes mais simples e reutilizáveis sem ter que transformá-los em classes.
+
+## Hook useState
+
+O hook `useState` permite adicionar estado aos seus componentes funcionais.
+
+```javascript
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setCount(count + 1)}>Clique aqui</button>
+    </div>
+  );
+}
+```
+
+## Hook useEffect
+
+O hook `useEffect` permite realizar efeitos colaterais em seus componentes funcionais, como acessar dados externos ou modificar o DOM.
+
+```javascript
+import React, { useState, useEffect } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Você clicou ${count} vezes`;
+  });
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setCount(count + 1)}>Clique aqui</button>
+    </div>
+  );
+}
+```
+
+## Hooks Personalizados
+
+Você pode criar seus próprios hooks personalizados para reutilizar lógica em seus componentes.
+
+```javascript
+import { useState } from "react";
+
+function useCounter(initialCount) {
+  const [count, setCount] = useState(initialCount);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return { count, increment };
+}
+```
+
+Em seguida, você pode usar seu hook personalizado em seus componentes.
+
+```javascript
+import React from "react";
+import useCounter from "./useCounter";
+
+function Counter() {
+  const { count, increment } = useCounter(0);
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={increment}>Clique aqui</button>
+    </div>
+  );
+}
+```
+
+Os Hooks do React são uma funcionalidade poderosa que permite escrever componentes mais limpos e reutilizáveis no React. Comece a usá-los em seus projetos hoje mesmo!

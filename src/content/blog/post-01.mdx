@@ -1,0 +1,55 @@
+---
+title: Explorando Funções do ES6
+date: 2023-06-01
+description: Explorando algumas das novas funcionalidades do ES6 em JavaScript.
+author: Jane Doe
+image: "/assets/images/post-01.png"
+tags: [JavaScript, ES6, Programação]
+---
+
+# {frontmatter.title}
+
+{/* <!-- Mostrar imagem --> */}
+
+<img
+  src="/assets/images/post-01.png"
+  width="350"
+  alt="Explorando Funções do ES6"
+/>
+
+O JavaScript ES6 introduziu várias novas funcionalidades que tornaram a codificação em JavaScript mais eficiente e agradável. Vamos explorar algumas dessas funcionalidades.
+
+## Funções de Flecha
+
+As funções de flecha fornecem uma nova sintaxe para escrever expressões de função. São mais concisas e vinculam lexicamente o valor de `this`.
+
+### Exemplo
+
+```javascript
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Saída: 5
+```
+
+## Template Literals
+
+Os template literals permitem uma interpolação de strings mais fácil e strings de várias linhas. Eles utilizam acento grave da crase (\`) em vez de aspas simples ou duplas.
+
+### Exemplo
+
+```javascript
+const name = "Jane";
+console.log(`Olá, ${name}!`);
+// Saída: Olá, Jane!
+```
+
+## Atribuição via desestruturação
+
+A atribuição via desestruturação permite extrair valores de arrays ou objetos e atribuí-los a variáveis de uma maneira mais concisa.
+
+### Exemplo
+
+```javascript
+const person = { name: "Jane", age: 30 };
+const { name, age } = person;
+console.log(name, age); // Saída: Jane 30
+```

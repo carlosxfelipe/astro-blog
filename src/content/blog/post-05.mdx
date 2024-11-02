@@ -1,0 +1,77 @@
+---
+title: CSS Grid Layout - Um guia completo
+date: 2023-06-25
+description: Aprenda a utilizar o CSS Grid Layout para criar layouts complexos de forma simples.
+author: Emily Davis
+image: "/assets/images/post-05.png"
+tags: [CSS, Design Web, Frontend]
+---
+
+# CSS Grid Layout: Um guia completo
+
+O CSS Grid Layout é uma poderosa ferramenta que permite criar layouts complexos de forma simples e flexível. Neste guia, você aprenderá a usar o CSS Grid Layout para criar layouts de páginas web modernas e responsivas.
+
+## Introdução ao CSS Grid
+
+O CSS Grid Layout é um sistema de layout bidimensional que permite criar layouts de páginas web usando linhas e colunas. Com o CSS Grid Layout, você pode criar layouts complexos e flexíveis sem precisar utilizar floats ou frameworks de layout.
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+```
+
+Esse grid container criará uma grade com três colunas e um espaço de 10px entre os elementos da grade. Você também pode usar a propriedade `grid-template-rows` para definir as linhas da grade.
+
+## Grid Items
+
+Os elementos dentro de um grid container são chamados de grid items. Você pode posicionar os grid items na grade usando as propriedades `grid-column` e `grid-row`.
+
+```css
+.item {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+```
+
+Esse código posicionará o elemento nas segunda e terceira colunas e nas primeira e segunda linhas da grade.
+
+## Áreas de Grid
+
+O CSS Grid Layout também permite definir áreas nomeadas na grade. Isso facilita a colocação de elementos em áreas específicas da grade.
+
+```css
+.container {
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+.item {
+  grid-area: content;
+}
+```
+
+Este código define um grid container com áreas para cabeçalho, barra lateral, conteúdo e rodapé. O elemento com a classe `item` será posicionado na área de conteúdo da grade.
+
+## Grids Responsivos
+
+O CSS Grid Layout é perfeito para criar layouts responsivos. Você pode usar as funções `minmax()` e `auto-fill` para criar grades que se adaptem a diferentes tamanhos de tela.
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+```
+
+Esse código cria uma grade com colunas que têm pelo menos 200px de largura e se expandem para preencher o espaço disponível. A palavra-chave `auto-fill` permite que a grade crie automaticamente novas colunas conforme necessário.
+
+## Suporte a Navegadores
+
+O CSS Grid Layout é compatível com a maioria dos navegadores modernos, incluindo Chrome, Firefox, Safari e Edge. Você pode usar o CSS Grid Layout em seus projetos web sem se preocupar com a compatibilidade de navegadores.
+
+Esperamos que este guia tenha ajudado você a entender melhor o CSS Grid Layout e como utilizá-lo para criar layouts de páginas web modernas e responsivas!

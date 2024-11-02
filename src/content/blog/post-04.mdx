@@ -1,0 +1,71 @@
+---
+title: Construindo uma API REST com Node.js
+date: 2023-06-20
+description: Neste tutorial, construiremos uma API RESTful utilizando Node.js e Express.
+author: Bob Williams
+image: "/assets/images/post-04.png"
+tags: [Node.js, Express, API, Backend]
+---
+
+# Construindo uma API REST com Node.js
+
+Neste tutorial, construiremos uma API RESTful utilizando Node.js e Express. Uma API RESTful é uma interface de programação de aplicações que segue os princípios de REST (Representational State Transfer). Utilizaremos o Express, um framework para aplicativos web em Node.js, para criar nossa API.
+
+## Instalação do Node.js
+
+Primeiro, você precisa instalar o Node.js no seu sistema. Você pode baixar o Node.js no [site oficial](https://nodejs.org/).
+
+```bash
+npm init -y
+npm install express
+```
+
+Criamos um arquivo `index.js` e adicionamos o seguinte código:
+
+```javascript
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
+```
+
+Para executar a aplicação, use o seguinte comando:
+
+```bash
+node index.js
+```
+
+Agora você pode acessar sua aplicação em `http://localhost:3000`.
+
+## Criação de rotas para a API
+
+Vamos criar algumas rotas para nossa API, como uma rota para obter uma lista de usuários e outra para obter um usuário pelo seu ID.
+
+```javascript
+app.get("/api/users", (req, res) => {
+  res.json([
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+  ]);
+});
+
+app.get("/api/users/:id", (req, res) => {
+  const id = req.params.id;
+  res.json({ id, name: "Alice" });
+});
+```
+
+Agora você pode acessar a API de usuários em `http://localhost:3000/api/users` e `http://localhost:3000/api/users/1`.
+
+## Conclusão
+
+Neste tutorial, construímos uma API RESTful utilizando Node.js e Express. Você pode adicionar mais rotas e funcionalidades à sua API conforme suas necessidades. Divirta-se construindo sua API!
+
+Espero que este tutorial tenha sido útil. Se tiver alguma pergunta, fique à vontade para deixar um comentário.

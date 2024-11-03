@@ -73,11 +73,10 @@ console.log(name, age); // Saída: Jane 30
 Para executar o projeto localmente, você precisará ter o [Bun](https://bun.sh/) instalado. Depois de clonar o repositório, siga estes passos:
 
 1. Instale as dependências:
+
    ```bash
    bun install
    ```
-
-````
 
 2. Execute o projeto:
 
@@ -86,8 +85,3 @@ Para executar o projeto localmente, você precisará ter o [Bun](https://bun.sh/
    ```
 
 3. Acesse o blog localmente em [http://localhost:3000](http://localhost:3000).
-
-## Contribuição
-
-Sinta-se à vontade para contribuir com novas ideias, melhorias ou correções. Abra uma _issue_ ou envie um _pull request_.
-````

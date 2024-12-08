@@ -4,7 +4,10 @@ import { siteConfig } from "../config/site-config";
 import MainLayout from "../layouts/MainLayout.astro";
 import BlogPost from "src/components/BlogPost.astro";
 
-const posts = await getCollection("blog");
+const posts = await getCollection(
+  "blog",
+  (post) => post.data.isDraft === false
+);
 ---
 
 <MainLayout title="Blog do Carlos Felipe">
